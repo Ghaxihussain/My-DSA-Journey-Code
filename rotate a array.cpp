@@ -31,8 +31,6 @@ void rotate(int arr[],int k, int size){
 }
 
 
-// return a sliced array
-
 
 int* slice_after(int arr[], int size, int from){
 	int* r_arr = new int{size-from};
@@ -81,7 +79,7 @@ int main() {
 
     int from = -3;
     int usliced_size = -1*from;
-    cout<<"nigga"<<endl;
+    cout<<"hh"<<endl;
     cout<<"This is "<<usliced_size<<endl;
     ptr = slice_after(arr,size, from);
     for (int i = 0; i < usliced_size; i++) {
