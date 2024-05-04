@@ -1,19 +1,19 @@
 //linked Lists
 #include<iostream>
 using namespace std;
-//Make a Node
+
 struct Node{
 	int value;
 	Node* next;
 };
-// Make a function to insert a node at the biggening
+
 Node* insertatbegin(Node* head, int value){
 	Node* newnode = new Node;
 	newnode->value = value;
 	newnode->next = head;
 	return newnode;
 }
-// Maje a function to print the linked list 
+
 void trivaersal_linked(struct Node* head ){
 	cout<<"Start"<<endl;
 	while(head != NULL){
@@ -24,7 +24,7 @@ void trivaersal_linked(struct Node* head ){
 	}
 	cout<<"Stop"<<endl;
 }
-// Make a function to insert a node at the certain index
+
 Node* insertatindex(Node* head, int index,  int data){
 	Node* p = head;
 	Node* newnode = new Node;
@@ -39,7 +39,7 @@ Node* insertatindex(Node* head, int index,  int data){
 	p->next = newnode;
 	
 }
-// Make a function to insert a node at the end
+
 Node *insertatend(Node *head, int value){
 	Node *newnode = new Node;
 	newnode->value = value;
@@ -52,7 +52,7 @@ Node *insertatend(Node *head, int value){
 
 	return head;
 }
-// Main Program
+
 main(){
 	Node * head = NULL;
 	cout<<"insertion at the Bigining :- \n";
