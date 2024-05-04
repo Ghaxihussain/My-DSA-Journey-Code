@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-// making a reverse linked list and stack
 
 struct Node{
 	int value;
@@ -30,15 +29,15 @@ Node* insert_after(Node* head, int index, int value){
     }
     if(itr == NULL){
         cout << "Index out of range." << endl;
-        return head; // Return unchanged list if index is out of range
+        return head; 
     }
-    Node* after = itr->next; // Save the next node after the insertion point
-    itr->next = newnode; // Update next pointer of the previous node
-    newnode->prev = itr; // Update prev pointer of the new node
+    Node* after = itr->next; 
+    itr->next = newnode; 
+    newnode->prev = itr;
     if(after != NULL){
-        after->prev = newnode; // Update prev pointer of the node after the new node
+        after->prev = newnode; 
     }
-    newnode->next = after; // Update next pointer of the new node
+    newnode->next = after; 
     return head;
 }
 
@@ -54,29 +53,27 @@ Node* delete_index(Node* head, int index){
         delete temp;
         return head;
 	}
-    // Traverse to the node before the one to be deleted
+   
     for(int i = 0; i < index - 1 && itr != NULL; i++){
         itr = itr->next;
     }
-    
-    // Check if the index is out of range
+
     if(itr == NULL || itr->next == NULL){
         cout << "Index is out of range." << endl;
         return head;
     }
-    
-    // Save pointers to the previous and next nodes
+
     Node* prev = itr;
     Node* to_delete = itr->next;
     Node* after = to_delete->next;
     
-    // Update pointers to remove the node to be deleted
+  
     prev->next = after;
     if(after != NULL){
         after->prev = prev;
     }
     
-    // Delete the node
+
     delete to_delete;
     
     return head;
