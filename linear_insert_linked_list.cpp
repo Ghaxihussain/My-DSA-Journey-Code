@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-// Linked list
+
 struct Node{
 	int value;
 	Node* next;
@@ -37,9 +37,8 @@ Node* insertviaindex(Node *head, int index, int value){
 	p->next = newnode;
 }
 
-//deletion wit the value of the node
 Node* remove(Node* head, int value){
-    // Check if head itself needs to be removed
+    
     while(head != NULL && head->value == value) {
         Node* temp = head;
         head = head->next;
@@ -60,14 +59,14 @@ Node* remove(Node* head, int value){
     
     return head;
 }
-//delete the first
+
 Node* deletehead(Node* head){
 	Node* temp = head;
 	head = head->next;
 	delete temp;
 	return head;
 }
-//delete the end
+
 Node* deletelast(Node* head){
 	if(head==NULL || head->next ==NULL){
 		return 0;
@@ -81,10 +80,10 @@ Node* deletelast(Node* head){
 	prev->next = NULL;
 	delete p;
 }
-// delete from index
+
 Node* deleteAtIndex(Node* head, int index) {
     if (head == NULL || head->next == NULL) {
-        return NULL; // List is empty or has only one node
+        return NULL; 
     }
     
     if (index == 0) {
@@ -103,7 +102,7 @@ Node* deleteAtIndex(Node* head, int index) {
         i++;
     }   
     if (p->next == NULL) {
-        return head; // Index out of bounds
+        return head; 
     }
     p->next = after->next;
     delete after;
