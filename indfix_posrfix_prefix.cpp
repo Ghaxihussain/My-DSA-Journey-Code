@@ -105,7 +105,7 @@ string infix_to_post(string s){
 			pull(st);
 	
 	}
-	delete st; // Free memory allocated for stack
+	delete st; 
 	return postfix;
 }
 string reverse(string s) {
@@ -118,10 +118,10 @@ string reverse(string s) {
 
 
 string infix_to_prefix(string s) {
-    // Reverse the infix expression
+
     string reversedInfix = reverse(s);
 
-    // Reverse the infix expression and replace '(' with ')' and vice versa
+ 
     for (int i = 0; i < reversedInfix.length(); ++i) {
         if (reversedInfix[i] == '(') {
             reversedInfix[i] = ')';
@@ -130,10 +130,9 @@ string infix_to_prefix(string s) {
         }
     }
 
-    // Compute the postfix expression
     string postfix = infix_to_post(reversedInfix);
 
-    // Reverse the postfix expression to obtain the prefix expression
+
     string prefix = reverse(postfix);
     return prefix;
 }
