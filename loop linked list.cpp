@@ -5,7 +5,7 @@ struct Node{
 	Node* next;
 };
 
-// insertion after
+
 Node* linear_insert(Node* head, int value){
     Node* newnode = new Node;
     newnode->value = value;
@@ -14,7 +14,7 @@ Node* linear_insert(Node* head, int value){
     if(head == NULL){
     	cout<<"headnull"<<endl;
         head = newnode;
-        head->next = head; // Circular link to itself
+        head->next = head; 
         return head;
     }
 
@@ -26,7 +26,7 @@ Node* linear_insert(Node* head, int value){
     newnode->next = head;
     return head;
 }
-// insert after a node
+
 Node* insert_index(Node* head, int index, int value){
 	Node* newnode= new Node;
 	
@@ -50,8 +50,7 @@ Node* insert_index(Node* head, int index, int value){
 	return head;
 }
 
-// insert after
-//print
+
 void tri(Node* head){
     Node* p = head;
     int i = 0;
@@ -74,7 +73,6 @@ int main(){
     linear_insert(head, 40);
     tri(head);
     cout << "After insertions:" << endl;
-  // Update head with the return value
     head = insert_index(head, 0, 10001);
      head = insert_index(head, 3, 100012);
     tri(head);
