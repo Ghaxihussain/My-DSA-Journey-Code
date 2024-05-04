@@ -26,7 +26,7 @@ void printQuestion(question q){
     cout<<"Q) "<< q.question;
     printOptions(q.option);
 	}
-// check the answers
+
 void checkanswer(question q, int input){
 	if ((q.option.correctoption)== input ){
 		cout<<"Correct\n";
