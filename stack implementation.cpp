@@ -1,4 +1,4 @@
-// This is the code for stack
+
 
 #include<iostream>
 using namespace std;
@@ -7,21 +7,21 @@ struct stack{
 	int top=-1;
 	int* arr;
 };
-// check if empty
+
 int isempty(stack* ptr){
 	if(ptr->top == -1){
 		return 1;
 	}
 	return 0;
 }
-// checki if full
+
 int isfull(stack* ptr){
 	if(ptr->size -1 == ptr->top){
 		return 1;
 	}
 	return 0;
 }
-// push tha element in the stack 
+
 void push(stack* ptr,int value){
 	if(ptr->size-1 > ptr->top){
 	ptr->top += 1;
@@ -33,7 +33,7 @@ void push(stack* ptr,int value){
 	}
 	
 }
-// pull the element out of stack
+
 void pull(stack* ptr){
 	if(ptr->top == -1){
 		cout<<"the stack is empty";
@@ -45,7 +45,7 @@ void pull(stack* ptr){
 	}
 }
 
-// return the top without remvoing
+
 int peak(stack* ptr){
 	if(isempty(ptr)){
 		cout<<"\nstack empty"<<endl;
