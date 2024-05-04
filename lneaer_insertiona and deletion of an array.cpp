@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// this was linear search
+
 int search(int arr[], int size, int number){
 	for(int i =0; i< size ; i++){
 		if(arr[i] >= number){
