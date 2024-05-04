@@ -38,7 +38,6 @@ int main(){
     st.top = -1;
 
     push(st, 10);
-//    pop(st); // Remove the last pushed element
     gettop(st);
     return 0;
 }
