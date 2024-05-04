@@ -1,8 +1,7 @@
 #include<iostream>
 #include<cstring>
 
-// This program only works for the simple prentheses check, the next prgram 
-//will check it in a much bettrer way
+
 
 
 
@@ -14,14 +13,14 @@ struct stack {
     int size = 100;
     char* arr;
 
-    // Constructor to initialize the array
+ 
     stack() {
-        arr = new char[size]; // Dynamically allocate memory for the array
+        arr = new char[size]; 
     }
 
-    // Destructor to deallocate memory
+  
     ~stack() {
-        delete[] arr; // Deallocate memory for the array
+        delete[] arr; 
     }
 };
 
