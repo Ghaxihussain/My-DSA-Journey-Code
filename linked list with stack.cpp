@@ -15,7 +15,7 @@ int isempty(Node* top){
 
 Node* push(Node* top, int value){
     Node* newnode = new Node;
-    newnode->value = value; // Assign the value field
+    newnode->value = value;
     
     if(isempty(top)){
     	top = newnode;
